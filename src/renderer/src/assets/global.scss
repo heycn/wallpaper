@@ -1,0 +1,12 @@
+html {
+  -webkit-app-region: drag;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+textarea {
+  -webkit-app-region: no-drag;
+}
