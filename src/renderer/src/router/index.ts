@@ -4,7 +4,7 @@ import Settting from '@renderer/views/Settting.vue'
 
 const routes = [
   { name: 'home', path: '/', component: Home },
-  { name: 'settting', path: '/settting', component: Settting }
+  { name: 'setting', path: '/setting', component: Settting }
 ]
 
 const router = createRouter({
