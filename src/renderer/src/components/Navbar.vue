@@ -7,8 +7,8 @@ import { Pic, Setting } from '@icon-park/vue-next'
     <span class="w-12"></span>
     <h1>桌面壁纸</h1>
     <span class="flex items-center justify-center gap-2">
-      <Pic theme="outline" size="20" fill="#333" />
-      <Setting theme="outline" size="20" fill="#333" />
+      <Pic theme="outline" size="20" />
+      <Setting theme="outline" size="20" />
     </span>
   </nav>
 </template>

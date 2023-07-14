@@ -3,7 +3,11 @@
 }
 
 body {
-  @apply w-screen h-screen bg-gray-100;
+  @apply w-screen h-screen bg-gray-300;
+}
+
+section {
+  color: #333;
 }
 
 textarea {
