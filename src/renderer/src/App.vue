@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import Navbar from '@renderer/components/Navbar.vue'
 </script>
 
 <template>
-  <main></main>
+  <main>
+    <Navbar />
+  </main>
 </template>
 
 <style lang="scss">
-@import './assets/css/styles.scss';
+@import './assets/stylesheets/reset.scss';
 </style>
