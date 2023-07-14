@@ -2,9 +2,9 @@
 </script>
 
 <template>
-  <main>hello</main>
+  <main></main>
 </template>
 
-<style lang="less">
-@import './assets/css/styles.less';
+<style lang="scss">
+@import './assets/css/styles.scss';
 </style>

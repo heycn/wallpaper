@@ -3,8 +3,7 @@ html {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  @apply w-screen h-screen bg-gray-100;
 }
 
 textarea {
