@@ -1,0 +1,3 @@
+/server/wallpaper/*
+!/server/wallpaper/.keep
+.DS_Store
