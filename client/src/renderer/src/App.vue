@@ -4,10 +4,12 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <main>
-    <Navbar />
-    <RouterView />
-  </main>
+  <Suspense>
+    <main>
+      <Navbar />
+      <RouterView />
+    </main>
+  </Suspense>
 </template>
 
 <style lang="scss">

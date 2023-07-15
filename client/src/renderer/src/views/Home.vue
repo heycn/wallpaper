@@ -1,25 +1,28 @@
 <script setup lang="ts">
 import { Github, Mail } from '@icon-park/vue-next'
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { ElLoading } from 'element-plus'
+import { http } from '@renderer/shared/http';
 
 const img = ref<HTMLImageElement>()
-
-const getImage: () => void = () => {
+const getImage: () => Promise<void> = async () => {
+  const res = await http.get('/')
+  console.log(res.data)
   const loading = ElLoading.service({
     lock: true,
     fullscreen: true,
     text: '切换壁纸中',
     background: 'rgba(0, 0, 0, .5)',
   })
-  img.value!.src = `http://localhost:3000?k${Math.random()}`
+  img.value!.src = res.data
   img.value!.onload = (): void => { loading.close() }
 }
+onMounted(() => getImage())
 </script>
 
 <template>
   <section class="mx-2 rounded-md overflow-hidden shadow-lg">
-    <img ref="img" src="http://localhost:3000" class="aspect-video cursor-pointer" draggable="false" @click="getImage" />
+    <img ref="img" class="aspect-video cursor-pointer" draggable="false" @click="getImage" />
   </section>
   <section class="m-2">
     <button class="bg-gray-100 text-center w-full py-2 rounded-lg
