@@ -4,7 +4,9 @@ import { onMounted, ref } from 'vue';
 import { ElLoading } from 'element-plus'
 import { http } from '@renderer/shared/http';
 import { useImageStore } from '@renderer/stores/useImageStore';
+import useWallpaper from '@renderer/hooks/useWallpaper';
 
+const { setWallpaper } = useWallpaper()
 const imageStore = useImageStore()
 const img = ref<HTMLImageElement>()
 const getImage: () => Promise<void> = async () => {
@@ -31,7 +33,7 @@ onMounted(() => {
   </section>
   <section class="m-2">
     <button class="bg-gray-100 text-center w-full py-2 rounded-lg
-     hover:bg-white duration-500 shadow-sm hover:shadow-lg">
+     hover:bg-white duration-500 shadow-sm hover:shadow-lg" @click="setWallpaper">
       设为壁纸
     </button>
     <div class="my-2 mx-1 flex justify-between items-center text-sm">
