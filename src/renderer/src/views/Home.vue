@@ -3,7 +3,9 @@ import { Github, Mail } from '@icon-park/vue-next'
 </script>
 
 <template>
-  <img src="../../images/1.png" alt="" class="aspect-video drag" />
+  <section class="mx-2 rounded-md overflow-hidden shadow-lg">
+    <img src="../../images/1.png" alt="" class="aspect-video drag" />
+  </section>
   <section class="m-2">
     <button
       class="bg-gray-100 text-center w-full py-2 rounded-lg hover:bg-white duration-500 shadow-sm hover:shadow-lg"
