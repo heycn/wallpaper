@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import { Github, Mail } from '@icon-park/vue-next'
 import { ref } from 'vue';
+import { ElLoading } from 'element-plus'
 
 const img = ref<HTMLImageElement>()
 
 const getImage: () => void = () => {
+  const loading = ElLoading.service({
+    lock: true,
+    fullscreen: true,
+    text: '切换壁纸中',
+    background: 'rgba(0, 0, 0, 0.5)',
+  })
   img.value!.src = `http://localhost:3000?k${Math.random()}`
+  img.value!.onload = (): void => { loading.close() }
 }
 </script>
 
