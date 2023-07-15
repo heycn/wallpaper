@@ -38,6 +38,9 @@ dependencies:
   vue-router:
     specifier: '4'
     version: 4.2.4(vue@3.3.4)
+  wallpaper:
+    specifier: v5.0.1
+    version: 5.0.1
 
 devDependencies:
   '@electron-toolkit/tsconfig':
@@ -3859,6 +3862,11 @@ packages:
       '@vue/runtime-dom': 3.3.4
       '@vue/server-renderer': 3.3.4(vue@3.3.4)
       '@vue/shared': 3.3.4
+
+  /wallpaper@5.0.1:
+    resolution: {integrity: sha512-yB9sBVfosR+NVabo/Ej21hga5u55NQUUdDVoo4LwrLJDRA+ezzX4wmNGwl5yxx/fkBgTADMqLL8ldnfN8TI9hQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
