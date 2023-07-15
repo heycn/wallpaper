@@ -3,7 +3,9 @@ import { Github, Mail } from '@icon-park/vue-next'
 import { onMounted, ref } from 'vue';
 import { ElLoading } from 'element-plus'
 import { http } from '@renderer/shared/http';
+import { useImageStore } from '@renderer/stores/useImageStore';
 
+const imageStore = useImageStore()
 const img = ref<HTMLImageElement>()
 const getImage: () => Promise<void> = async () => {
   const res = await http.get('/')
@@ -14,15 +16,18 @@ const getImage: () => Promise<void> = async () => {
     text: '切换壁纸中',
     background: 'rgba(0, 0, 0, .5)',
   })
-  img.value!.src = res.data
+  imageStore.url = res.data
+  img.value!.src = imageStore.url
   img.value!.onload = (): void => { loading.close() }
 }
-onMounted(() => getImage())
+onMounted(() => {
+  if (!imageStore.url) getImage()
+})
 </script>
 
 <template>
   <section class="mx-2 rounded-md overflow-hidden shadow-lg">
-    <img ref="img" class="aspect-video cursor-pointer" draggable="false" @click="getImage" />
+    <img ref="img" :src="imageStore.url" class="aspect-video cursor-pointer" draggable="false" @click="getImage" />
   </section>
   <section class="m-2">
     <button class="bg-gray-100 text-center w-full py-2 rounded-lg
