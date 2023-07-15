@@ -4,7 +4,7 @@ import { Github, Mail } from '@icon-park/vue-next'
 
 <template>
   <section class="mx-2 rounded-md overflow-hidden shadow-lg">
-    <img src="../../images/1.png" alt="" class="aspect-video drag" />
+    <img src="http://localhost:3000/wallpaper/1.jpg" alt="" class="aspect-video drag" />
   </section>
   <section class="m-2">
     <button class="bg-gray-100 text-center w-full py-2 rounded-lg
