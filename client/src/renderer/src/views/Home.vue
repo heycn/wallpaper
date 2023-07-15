@@ -10,7 +10,7 @@ const getImage: () => void = () => {
     lock: true,
     fullscreen: true,
     text: '切换壁纸中',
-    background: 'rgba(0, 0, 0, 0.5)',
+    background: 'rgba(0, 0, 0, .5)',
   })
   img.value!.src = `http://localhost:3000?k${Math.random()}`
   img.value!.onload = (): void => { loading.close() }
