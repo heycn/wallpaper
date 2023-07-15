@@ -13,8 +13,7 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-recommended',
     'eslint:recommended',
-    '@vue/eslint-config-typescript/recommended',
-    '@vue/eslint-config-prettier'
+    '@vue/eslint-config-typescript/recommended'
   ],
   rules: {
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
@@ -25,7 +24,12 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'vue/require-default-prop': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/max-attributes-per-line': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/first-attribute-linebreak': 'off',
+    'vue/html-closing-bracket-newline': 'off'
   },
   overrides: [
     {
