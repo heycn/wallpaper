@@ -2,6 +2,10 @@
   -webkit-app-region: drag;
 }
 
+.nodrag {
+  -webkit-app-region: no-drag;
+}
+
 body {
   @apply w-screen h-screen bg-gray-300;
   @apply select-none;
@@ -9,8 +13,4 @@ body {
 
 section {
   color: #333;
-}
-
-textarea {
-  -webkit-app-region: no-drag;
 }
