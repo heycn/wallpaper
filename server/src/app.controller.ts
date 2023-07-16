@@ -16,7 +16,6 @@ export class AppController {
     const imageUrl = 'http://localhost:3000/wallpaper/' + imageName
     return new Promise(resolve => {
       setTimeout(() => {
-        console.log(imageUrl)
         resolve(imageUrl)
       }, 500)
     })

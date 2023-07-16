@@ -10,7 +10,6 @@ const imageStore = useImageStore()
 const img = ref<HTMLImageElement>()
 const getImage: () => Promise<void> = async () => {
   const res = await http.get('/')
-  console.log(res.data)
   const loading = ElLoading.service({
     lock: true,
     fullscreen: true,
