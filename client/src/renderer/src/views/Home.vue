@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Github, Mail } from '@icon-park/vue-next'
 import { onMounted, ref } from 'vue'
 import { ElLoading } from 'element-plus'
 import { http } from '@renderer/shared/http'
@@ -43,16 +42,5 @@ onMounted(() => {
         保存壁纸
       </button>
     </div>
-  </section>
-  <section class="mt-4 text-gray-700 text-sm flex justify-center gap-3">
-    联系我:
-    <a href="https://github.com/heycn" target="_blank" rel="noopener noreferrer" class="flex gap-1">
-      <Github theme="outline" size="18" />
-      <span>heycn</span>
-    </a>
-    <a href="mailto:heycn@foxmail.com" title="go to my github!" target="_blank" class="flex gap-1">
-      <Mail theme="outline" size="18" />
-      <span>heycn@foxmail.com</span>
-    </a>
   </section>
 </template>

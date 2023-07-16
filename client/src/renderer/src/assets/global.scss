@@ -9,6 +9,8 @@
 body {
   @apply w-screen h-screen bg-gray-300;
   @apply select-none;
+  @apply font-mono;
+  
 }
 
 section {
