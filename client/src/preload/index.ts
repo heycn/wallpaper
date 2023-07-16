@@ -9,6 +9,9 @@ const api = {
   saveWallpaper: (url: string) => {
     ipcRenderer.send('saveWallpaper', url)
   },
+  setCachePath: () => {
+    alert(3)
+  }
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to
