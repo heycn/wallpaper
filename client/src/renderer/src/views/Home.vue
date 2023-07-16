@@ -30,13 +30,13 @@ onMounted(() => {
     <img ref="img" :src="imageStore.url" class="aspect-video cursor-pointer" draggable="false" @click="getImage" />
   </section>
   <section class="m-2">
-    <button class="bg-gray-100 text-center w-full py-2 rounded-lg
-     hover:bg-white duration-500 shadow-sm hover:shadow-lg" @click="setWallpaper">
+    <button class="bg-[#346dc8] text-center w-full py-2 rounded-lg text-gray-300
+     hover:bg-opacity-80 duration-500 shadow-sm hover:shadow-lg" @click="setWallpaper">
       设为壁纸
     </button>
     <div class="my-2 mx-1 flex justify-between items-center text-sm">
       <span class="w-1/6"></span>
-      <span class="font-light opacity-50">点击大图随机切换壁纸</span>
+      <span class="font-light opacity-40">点击大图随机切换壁纸</span>
       <button class="text-blue-500 hover:text-blue-400 duration-300" @click="saveWallpaper">
         保存壁纸
       </button>
