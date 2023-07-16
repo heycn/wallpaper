@@ -1,15 +1,12 @@
-import { IpcMainEvent, dialog } from "electron"
-import { ipcMain } from "electron"
+import {  dialog } from "electron"
 import { createWriteStream } from 'node:fs'
 import { pipeline } from 'node:stream'
 import { promisify } from 'node:util'
 import fetch from 'node-fetch'
 import { resolve } from "node:path"
-import wallpaper from "wallpaper"
 
-ipcMain.on('setWallpaper', async (_event: IpcMainEvent, url: string) => {
+export const downloadWallpaper = async (url: string) => {
   const localFile = resolve(__dirname, '../../wallpaper', url.split('/').pop()!)
-  console.log(localFile)
   const streamPipeline = promisify(pipeline)
   const response = await fetch(url)
   if (!response.ok) {
@@ -17,5 +14,5 @@ ipcMain.on('setWallpaper', async (_event: IpcMainEvent, url: string) => {
     throw new Error(`unexpected response ${response.statusText}`)
   }
   await streamPipeline(response.body!, createWriteStream(localFile))
-  wallpaper.set(localFile, { screen: 'all', scale: 'auto' })
-})
+  return localFile
+}

@@ -5,7 +5,10 @@ import { electronAPI } from '@electron-toolkit/preload'
 const api = {
   setWallpaper: (url: string) => {
     ipcRenderer.send('setWallpaper', url)
-  }
+  },
+  downloadWallpaper: (url: string) => {
+    alert(url)
+  },
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to

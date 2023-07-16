@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { Github, Mail } from '@icon-park/vue-next'
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue'
 import { ElLoading } from 'element-plus'
-import { http } from '@renderer/shared/http';
-import { useImageStore } from '@renderer/stores/useImageStore';
-import useWallpaper from '@renderer/hooks/useWallpaper';
+import { http } from '@renderer/shared/http'
+import { useImageStore } from '@renderer/stores/useImageStore'
+import useWallpaper from '@renderer/hooks/useWallpaper'
 
-const { setWallpaper } = useWallpaper()
+const { setWallpaper, downloadWallpaper } = useWallpaper()
 const imageStore = useImageStore()
 const img = ref<HTMLImageElement>()
 const getImage: () => Promise<void> = async () => {
@@ -39,7 +39,9 @@ onMounted(() => {
     <div class="my-2 mx-1 flex justify-between items-center text-sm">
       <span class="w-1/6"></span>
       <span class="font-light opacity-50">点击大图随机切换壁纸</span>
-      <button class="text-blue-500 hover:text-blue-400 duration-300">下载壁纸</button>
+      <button class="text-blue-500 hover:text-blue-400 duration-300" @click="downloadWallpaper">
+        下载壁纸
+      </button>
     </div>
   </section>
   <section class="mt-4 text-gray-700 text-sm flex justify-center gap-3">

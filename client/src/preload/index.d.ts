@@ -5,6 +5,7 @@ declare global {
     electron: ElectronAPI
     api: {
       setWallpaper: (url: string) => void
+      downloadWallpaper: (url: string) => void
     }
   }
 }

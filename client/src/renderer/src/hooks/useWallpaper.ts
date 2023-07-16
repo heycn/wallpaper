@@ -5,5 +5,8 @@ export default () => {
   const setWallpaper = () => {
     window.api.setWallpaper(imageStore.url)
   }
-  return { setWallpaper }
+  const downloadWallpaper = () => {
+    window.api.downloadWallpaper(imageStore.url)
+  }
+  return { setWallpaper, downloadWallpaper }
 }
