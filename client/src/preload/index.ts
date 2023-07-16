@@ -11,6 +11,9 @@ const api = {
   },
   setCachePath: () => {
     return ipcRenderer.invoke('setCachePath')
+  },
+  checkCachePath: (path: string) => {
+    return ipcRenderer.invoke('checkCachePath', path)
   }
 }
 

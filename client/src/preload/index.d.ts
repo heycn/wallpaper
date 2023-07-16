@@ -7,6 +7,7 @@ declare global {
       setWallpaper: (url: string, path: string) => void
       saveWallpaper: (url: string) => void
       setCachePath: () => Promise<string>
+      checkCachePath: (path: string) => Promise<boolean>
     }
   }
 }

@@ -8,6 +8,6 @@ ipcMain.on('saveWallpaper', async (_event: IpcMainEvent, url: string) => {
     defaultPath: fileName,
     properties: ['createDirectory']
   })
-  if(res.canceled) return
-  downloadWallpaper(url, res.filePath)
+  if (res.canceled) return
+  downloadWallpaper(url, res.filePath as string)
 })

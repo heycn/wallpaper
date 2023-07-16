@@ -3,7 +3,6 @@ import { createWriteStream } from 'node:fs'
 import { pipeline } from 'node:stream'
 import { promisify } from 'node:util'
 import fetch from 'node-fetch'
-import { resolve } from "node:path"
 
 export const downloadWallpaper = async (url: string, localFile: string) => {
   const streamPipeline = promisify(pipeline)
