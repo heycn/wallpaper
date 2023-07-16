@@ -3,8 +3,8 @@ import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
 const api = {
-  setWallpaper: (url: string) => {
-    ipcRenderer.send('setWallpaper', url)
+  setWallpaper: (url: string, path: string) => {
+    ipcRenderer.send('setWallpaper', url, path)
   },
   saveWallpaper: (url: string) => {
     ipcRenderer.send('saveWallpaper', url)

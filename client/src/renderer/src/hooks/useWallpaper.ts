@@ -7,7 +7,7 @@ export default () => {
   const pathStore = usePathStore()
 
   const setWallpaper = () => {
-    window.api.setWallpaper(imageStore.url)
+    window.api.setWallpaper(imageStore.url, pathStore.cachePath)
   }
   const saveWallpaper = () => {
     window.api.saveWallpaper(imageStore.url)
