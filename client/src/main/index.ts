@@ -4,6 +4,7 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import './ipc/setWallpaper'
 import './ipc/saveWallpaper'
+import './ipc/setCachePath'
 
 function createWindow(): void {
   // Create the browser window.

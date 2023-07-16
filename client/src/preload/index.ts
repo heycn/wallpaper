@@ -10,7 +10,7 @@ const api = {
     ipcRenderer.send('saveWallpaper', url)
   },
   setCachePath: () => {
-    alert(3)
+    return ipcRenderer.invoke('setCachePath')
   }
 }
 

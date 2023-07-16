@@ -1,7 +1,7 @@
 import { ipcMain, dialog, IpcMainEvent } from "electron"
 import { downloadWallpaper } from "../util"
 
-ipcMain.on('saveWallpaper', async (event: IpcMainEvent, url: string) => {
+ipcMain.on('saveWallpaper', async (_event: IpcMainEvent, url: string) => {
   const fileName = url.split('/').pop()!
   const res = await dialog.showSaveDialog({
     title: '壁纸另存为',
