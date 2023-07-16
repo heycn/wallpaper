@@ -6,8 +6,8 @@ const api = {
   setWallpaper: (url: string) => {
     ipcRenderer.send('setWallpaper', url)
   },
-  downloadWallpaper: (url: string) => {
-    alert(url)
+  saveWallpaper: (url: string) => {
+    ipcRenderer.send('saveWallpaper', url)
   },
 }
 

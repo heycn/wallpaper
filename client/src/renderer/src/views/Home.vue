@@ -6,7 +6,7 @@ import { http } from '@renderer/shared/http'
 import { useImageStore } from '@renderer/stores/useImageStore'
 import useWallpaper from '@renderer/hooks/useWallpaper'
 
-const { setWallpaper, downloadWallpaper } = useWallpaper()
+const { setWallpaper, saveWallpaper } = useWallpaper()
 const imageStore = useImageStore()
 const img = ref<HTMLImageElement>()
 const getImage: () => Promise<void> = async () => {
@@ -39,8 +39,8 @@ onMounted(() => {
     <div class="my-2 mx-1 flex justify-between items-center text-sm">
       <span class="w-1/6"></span>
       <span class="font-light opacity-50">点击大图随机切换壁纸</span>
-      <button class="text-blue-500 hover:text-blue-400 duration-300" @click="downloadWallpaper">
-        下载壁纸
+      <button class="text-blue-500 hover:text-blue-400 duration-300" @click="saveWallpaper">
+        保存壁纸
       </button>
     </div>
   </section>

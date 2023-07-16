@@ -1,12 +1,12 @@
-import {  dialog } from "electron"
+import { dialog } from "electron"
 import { createWriteStream } from 'node:fs'
 import { pipeline } from 'node:stream'
 import { promisify } from 'node:util'
 import fetch from 'node-fetch'
 import { resolve } from "node:path"
 
-export const downloadWallpaper = async (url: string) => {
-  const localFile = resolve(__dirname, '../../wallpaper', url.split('/').pop()!)
+export const downloadWallpaper = async (url: string, filePath?: string) => {
+  const localFile = filePath || resolve(__dirname, '../../wallpaper', url.split('/').pop()!)
   const streamPipeline = promisify(pipeline)
   const response = await fetch(url)
   if (!response.ok) {
