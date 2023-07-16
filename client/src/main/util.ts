@@ -5,8 +5,7 @@ import { promisify } from 'node:util'
 import fetch from 'node-fetch'
 import { resolve } from "node:path"
 
-export const downloadWallpaper = async (url: string, path: string) => {
-  const localFile = resolve(path, url.split('/').pop()!)
+export const downloadWallpaper = async (url: string, localFile: string) => {
   const streamPipeline = promisify(pipeline)
   const response = await fetch(url)
   if (!response.ok) {

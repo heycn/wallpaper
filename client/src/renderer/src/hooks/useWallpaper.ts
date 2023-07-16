@@ -14,7 +14,7 @@ export default () => {
   }
   const setCachePath = async () => {
     const path = await window.api.setCachePath()
-    pathStore.cachePath = path
+    if (path) pathStore.cachePath = path
   }
 
   return { setWallpaper, saveWallpaper, setCachePath }
