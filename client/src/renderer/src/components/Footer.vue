@@ -3,7 +3,7 @@ import { Github, Mail } from '@icon-park/vue-next'
 </script>
 
 <template>
-  <footer class="mb-2 opacity-70 text-sm flex justify-center gap-3 font-sans">
+  <footer class="mb-2 opacity-40 text-sm flex justify-center gap-3 font-sans">
     联系我:
     <a href="https://github.com/heycn" target="_blank" rel="noopener noreferrer" class="flex gap-1 items-center underline">
       <Github theme="outline" size="18" />

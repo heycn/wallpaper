@@ -10,8 +10,8 @@ function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     alwaysOnTop: true,
-    width: 400,
-    height: 375,
+    width: 460,
+    height: 420,
     show: false,
     frame: false,
     resizable: false,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Pic, Setting, Computer } from '@icon-park/vue-next'
+import { Home, Setting, Computer } from '@icon-park/vue-next'
 </script>
 
 <template>
@@ -8,19 +8,21 @@ import { Pic, Setting, Computer } from '@icon-park/vue-next'
       <Computer theme="outline" size="16" />
       桌面壁纸
     </p>
-    <span class="flex items-center justify-center gap-2 mr-2">
-      <Pic
-        size="16"
-        title="首页"
-        class="cursor-pointer hover:text-gray-600 duration-300"
-        @click="$router.push({ name: 'home' })"
-      />
-      <Setting
-        size="16"
-        title="设置"
-        class="cursor-pointer hover:text-gray-600 duration-300"
-        @click="$router.push({ name: 'setting' })"
-      />
-    </span>
+    <button
+      v-if="$route.name !== 'setting'"
+      class="m-2 hover:bg-gray-200 duration-300 p-1 rounded"
+      title="设置"
+      @click="$router.push({ name: 'setting' })"
+    >
+      <Setting size="16" />
+    </button>
+    <button
+      v-if="$route.name !== 'home'"
+      class="m-2 hover:bg-gray-200 duration-300 p-1 rounded"
+      title="首页"
+      @click="$router.push({ name: 'home' })"
+    >
+      <Home size="16" />
+    </button>
   </nav>
 </template>
