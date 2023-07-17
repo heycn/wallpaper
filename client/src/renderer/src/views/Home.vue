@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import { ElLoading } from 'element-plus'
 import { http } from '@renderer/shared/http'
 import { useImageStore } from '@renderer/stores/useImageStore'
-import { Back, Next, ShuffleOne } from '@icon-park/vue-next'
+import { ShuffleOne } from '@icon-park/vue-next'
 import useWallpaper from '@renderer/hooks/useWallpaper'
 
 const { setWallpaper, saveWallpaper } = useWallpaper()
